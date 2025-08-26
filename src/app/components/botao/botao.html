@@ -1,0 +1,9 @@
+<section class="container">
+    <div style="text-align: center; margin-top: 50px">
+        
+        <p>Estado do botão: {{ estaDesabilitado ? 'Desabilitado' : 'Habilitado' }}</p>
+        <button [disabled]="estaDesabilitado">Botão de exemplo</button>
+        <br/><br/>
+        <button (click)="alternarEstado()">Alternar Estado</button>
+    </div>
+</section>

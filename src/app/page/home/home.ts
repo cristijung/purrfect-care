@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss'
 })
 export class Home {
+  title = 'Bem Vindo(a) à Clínica Purrfect Care - especializada em atimento felino';
 
 }
