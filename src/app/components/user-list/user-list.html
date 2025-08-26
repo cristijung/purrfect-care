@@ -1,0 +1,17 @@
+<section class="container">
+    <div class="user-list-container">
+        <h3>{{ title }}</h3>
+        <ul *ngIf="users.length > 0; else noUsers">
+            <li *ngFor="let user of users" class="user-item">
+                <div class="user-info">
+                    <span class="user-name">{{ user.name }}</span>
+                    <span class="user-email">{{ user.email }}</span>
+                </div>
+                <button (click)="deletedUser(user.id)" class="delete-button">Excluir</button>
+            </li>
+        </ul>
+        <ng-template #noUsers>
+            <p class="no-users-message">Nenhum usuário para exibir!</p>
+        </ng-template>
+    </div>
+</section>

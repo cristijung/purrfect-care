@@ -1,1 +1,8 @@
-<p>sobre works!</p>
+<section class="container">
+  <div class="sobre-container">
+    <h2>{{ title }}</h2>
+    <p>Aqui você pode conhecer a nossa equipe e a nossa empresa</p>
+
+    <app-user-list [users]="usersData" (userDeleted)="onUserDeleted($event)"> </app-user-list>
+  </div>
+</section>
