@@ -1,1 +1,17 @@
-<p>saude works!</p>
+<div class="saude-container">
+  <h1>Agendamento de Consultas Veterinárias</h1>
+
+  <p>Bem-vindo! Escolha a especialidade, médico e exames para o seu pet.</p>
+
+  <app-atendimento-vet [consulta]="consultaAtual()" (consultaChange)="consultaAtual.set($event)">
+  </app-atendimento-vet>
+
+  <hr />
+
+  <div class="summary-card">
+    <h2>Agendamento Confirmado</h2>
+    <p><strong>Especialidade:</strong> {{ consultaAtual().especialidadeId }}</p>
+    <p><strong>Médico:</strong> {{ consultaAtual().medicoId }}</p>
+    <p><strong>Exame:</strong> {{ consultaAtual().exameId }}</p>
+  </div>
+</div>

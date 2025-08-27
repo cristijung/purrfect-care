@@ -1,1 +1,54 @@
-<p>atendimento-vet works!</p>
+<div class="form-card">
+  <h2>Dados do Atendimento</h2>
+
+  <div class="form-group">
+    <label for="especialidade">Especialidade:</label>
+    <select
+      id="especialidade"
+      [ngModel]="consulta().especialidadeId"
+      (ngModelChange)="onEspecialidadeChange($event)">
+      <option [ngValue]="null" disabled>Selecione uma especialidade</option>
+      <!-- usando a sintaxe @for -->
+      @for (esp of especialidades; track esp.id) {
+        <option [ngValue]="esp.id">
+          {{ esp.nome }}
+        </option>
+      }
+    </select>
+  </div>
+
+  <!-- usando a sintaxe @if e @for -->
+  @if (consulta().especialidadeId) {
+    <div class="form-group">
+      <label for="medico">Médico:</label>
+      <select
+        id="medico"
+        [ngModel]="consulta().medicoId"
+        (ngModelChange)="onMedicoChange($event)">
+        <option [ngValue]="null" disabled>Selecione um médico</option>
+        @for (med of medicos; track med.id) {
+          <option [ngValue]="med.id">
+            {{ med.nome }}
+          </option>
+        }
+      </select>
+    </div>
+  }
+
+  @if (examesFiltrados().length > 0) {
+    <div class="form-group">
+      <label for="exame">Exame:</label>
+      <select
+        id="exame"
+        [ngModel]="consulta().exameId"
+        (ngModelChange)="onExameChange($event)">
+        <option [ngValue]="null" disabled>Selecione um exame</option>
+        @for (exame of examesFiltrados(); track exame.id) {
+          <option [ngValue]="exame.id">
+            {{ exame.nome }}
+          </option>
+        }
+      </select>
+    </div>
+  }
+</div>
