@@ -9,14 +9,14 @@ import { UserList } from '../../components/user-list/user-list';
   styleUrl: './sobre.scss'
 })
 export class Sobre {
-  title = 'Conheça sobre nossa clínica e equipe'
+  title = 'Conheça sobre nossa clínica e equipe de médicos veterinários'
 
   // dados q serão passados p o componente filho
   usersData: User[] = [
-    { id: 1, name: 'Ana Banana', email: 'ana@email.com' },
-    { id: 2, name: 'Bia Souza', email: 'bia@email.com' },
-    { id: 3, name: 'José Silva', email: 'jose@email.com' },
-    { id: 4, name: 'Anaí Banana', email: 'anai@email.com' }
+    { id: 1, name: 'Dra. Ana Banana', email: 'ana@email.com' },
+    { id: 2, name: 'Dra. Bia Souza', email: 'bia@email.com' },
+    { id: 3, name: 'Dr. José Silva', email: 'jose@email.com' },
+    { id: 4, name: 'Dra. Anaí Banana', email: 'anai@email.com' }
   ];
 
   onUserDeleted(userId: number) {
