@@ -1,0 +1,50 @@
+@use '../../styles/_variables' as vars;
+
+.saude-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;  
+  background-color: vars.$background-offlight;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 { 
+  color: vars.$secondary-color;
+  margin-bottom: 0.5rem;
+}
+
+p {  
+  color: vars.$text-dark-dois;
+  font-size: 1.1rem;
+}
+
+hr {
+  border: none;  
+  border-top: 2px dashed vars.$terciary-color;
+  margin: 30px 0;
+}
+
+.summary-card {  
+  background-color: vars.$background-light;
+  padding: 1.5rem;
+  border-radius: 8px; 
+  border-left: 5px solid vars.$secondary-color;
+  text-align: left;
+}
+
+.summary-card h2 {  
+  color: vars.$text-dark;
+  margin-top: 0;
+}
+
+.summary-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.summary-card strong {  
+  color: vars.$text-dark-dois;
+}

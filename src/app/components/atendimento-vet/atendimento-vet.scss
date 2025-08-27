@@ -1,0 +1,54 @@
+@use '../../styles/_variables' as vars;
+
+.form-card {  
+  background-color: vars.$background-light;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  
+  border: 1px solid vars.$light-gray;
+  text-align: left;
+}
+
+h2 {  
+  color: vars.$text-dark;  
+  border-bottom: 2px solid vars.$background-offlight;
+  padding-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;  
+  color: vars.$text-dark-dois;
+}
+
+select {
+  width: 100%;
+  padding: 12px 15px;  
+  border: 1px solid vars.$light-gray;
+  border-radius: 8px;
+  font-size: 1rem;  
+  color: vars.$text-dark-dois;  
+  background-color: vars.$background-offlight;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23504f4f'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 18px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+  outline: none;  
+  border-color: vars.$secondary-color;  
+  box-shadow: 0 0 0 3px vars.$terciary-color;
+}
